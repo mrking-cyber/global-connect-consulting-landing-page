@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Connect Consulting - Expert Business Strategy & Market Analysis</title>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header id="main-header" class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Placeholder for logo image - REPLACE WITH YOUR ACTUAL LOGO -->
+                <img src="https://placehold.co/50x50/007bff/ffffff?text=LOGO" alt="Global Connect Consulting Logo" class="h-12 w-12 mr-4 rounded-md">
+                <h1 class="text-2xl font-bold text-secondary-color">Global Connect Consulting</h1>
+            </div>
+            <!-- Mobile navigation toggle button -->
+            <button class="nav-toggle md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <!-- Desktop Navigation -->
+            <nav class="main-nav hidden md:flex items-center space-x-6">
+                <a href="#services" class="text-gray-700 hover:text-primary-color font-semibold text-lg transition-colors duration-300">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-color font-semibold text-lg transition-colors duration-300">About Us</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary-color font-semibold text-lg transition-colors duration-300">Testimonials</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary-color font-semibold text-lg transition-colors duration-300">Contact</a>
+            </nav>
+        </div>
+        <!-- Mobile Navigation Menu (hidden by default, controlled by JS/CSS) -->
+        <nav class="mobile-nav-menu md:hidden">
+            <ul class="flex flex-col items-center pt-24 space-y-6">
+                <li><a href="#services" class="text-white text-xl font-semibold hover:bg-black hover:bg-opacity-20 px-4 py-3 rounded-md block w-full text-center transition-colors duration-300">Services</a></li>
+                <li><a href="#about" class="text-white text-xl font-semibold hover:bg-black hover:bg-opacity-20 px-4 py-3 rounded-md block w-full text-center transition-colors duration-300">About Us</a></li>
+                <li><a href="#testimonials" class="text-white text-xl font-semibold hover:bg-black hover:bg-opacity-20 px-4 py-3 rounded-md block w-full text-center transition-colors duration-300">Testimonials</a></li>
+                <li><a href="#contact" class="text-white text-xl font-semibold hover:bg-black hover:bg-opacity-20 px-4 py-3 rounded-md block w-full text-center transition-colors duration-300">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-cover bg-center text-white py-24 md:py-32 flex items-center justify-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1200x800/0056b3/ffffff?text=Global+Connect');">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Your Global Partner for Strategic Growth</h2>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in">Empowering businesses to thrive in new markets and optimize their global presence.</p>
+            <a href="#contact" class="btn bg-primary-color text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-secondary-color transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl">Schedule a Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-secondary-color text-center mb-12">Our Consulting Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Item 1 -->
+                <div class="service-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-xl font-semibold text-secondary-color mb-4 text-center">Business Strategy Development</h4>
+                    <p class="text-gray-700 text-center">We work with you to craft robust, long-term strategic plans that drive sustainable growth and competitive advantage.</p>
+                </div>
+                <!-- Service Item 2 -->
+                <div class="service-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-xl font-semibold text-secondary-color mb-4 text-center">Market Entry & Expansion</h4>
+                    <p class="text-gray-700 text-center">Navigate new international markets with confidence. We provide comprehensive analysis and strategic guidance for successful global expansion.</p>
+                </div>
+                <!-- Service Item 3 -->
+                <div class="service-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-xl font-semibold text-secondary-color mb-4 text-center">Market Research & Analysis</h4>
+                    <p class="text-gray-700 text-center">Gain deep insights into market trends, customer behavior, and competitive landscapes to inform your key business decisions.</p>
+                </div>
+                <!-- Service Item 4 -->
+                <div class="service-item bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h4 class="text-xl font-semibold text-secondary-color mb-4 text-center">Operational Efficiency Consulting</h4>
+                    <p class="text-gray-700 text-center">Streamline your processes and enhance productivity to maximize your operational effectiveness and profitability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-light-section-bg">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-secondary-color text-center mb-8">About Global Connect Consulting</h3>
+            <p class="text-lg md:text-xl text-gray-700 text-center max-w-4xl mx-auto mb-6">At Global Connect Consulting, our mission is to empower businesses, from startups to established enterprises, to achieve their full potential in an interconnected world. Founded on the principles of expertise, integrity, and client-centric solutions, we bring years of experience in global business strategy, market analysis, and operational excellence.</p>
+            <p class="text-lg md:text-xl text-gray-700 text-center max-w-4xl mx-auto">We believe that strategic insight, combined with practical execution, is the key to navigating today's complex business environment. Our team is dedicated to providing tailored advice and actionable strategies that lead to measurable results for your business.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-secondary-color text-center mb-12">What Our Clients Say</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial Item 1 -->
+                <div class="testimonial-item bg-light-section-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-lg italic text-gray-800 mb-4 text-center">"Global Connect Consulting provided invaluable insights that helped us successfully launch into the European market. Their expertise was truly a game-changer!"</p>
+                    <cite class="block text-right font-bold text-gray-600">— Jane Doe, CEO, Global Innovations Inc.</cite>
+                </div>
+                <!-- Testimonial Item 2 -->
+                <div class="testimonial-item bg-light-section-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-lg italic text-gray-800 mb-4 text-center">"Their strategic analysis transformed our business operations. We saw significant improvements in efficiency and profitability within months."</p>
+                    <cite class="block text-right font-bold text-gray-600">— John Smith, Operations Director, NexGen Solutions</cite>
+                </div>
+                <!-- Testimonial Item 3 -->
+                <div class="testimonial-item bg-light-section-bg p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-lg italic text-gray-800 mb-4 text-center">"Professional, thorough, and highly effective. Global Connect Consulting is our go-to partner for all things international strategy."</p>
+                    <cite class="block text-right font-bold text-gray-600">— Emily White, Founder, Zenith Ventures</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-light-section-bg">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl md:text-4xl font-bold text-secondary-color text-center mb-8">Get in Touch</h3>
+            <p class="text-lg text-gray-700 text-center mb-8 max-w-2xl mx-auto">Ready to discuss your business strategy? Contact us today to schedule a consultation.</p>
+
+            <div class="flex flex-col md:flex-row justify-center items-center md:space-x-12 mb-12 text-lg text-gray-800">
+                <p class="mb-4 md:mb-0"><strong>Email:</strong> <a href="mailto:info@globalconnectconsulting.com" class="text-primary-color hover:underline">info@globalconnectconsulting.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890" class="text-primary-color hover:underline">+1 (234) 567-890</a></p>
+            </div>
+
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID_HERE" method="POST" class="contact-form bg-white p-8 md:p-12 rounded-xl shadow-xl max-w-2xl mx-auto">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 text-lg font-semibold mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color text-lg">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-lg font-semibold mb-2">Your Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color text-lg">
+                </div>
+                <div class="mb-6">
+                    <label for="subject" class="block text-gray-700 text-lg font-semibold mb-2">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color text-lg">
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block text-gray-700 text-lg font-semibold mb-2">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-border-color rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-color text-lg resize-y"></textarea>
+                </div>
+                <button type="submit" class="btn w-full bg-primary-color text-white px-6 py-4 rounded-lg text-xl font-bold hover:bg-secondary-color transition-all duration-300 ease-in-out shadow-md hover:shadow-lg">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="main-footer" class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-md">&copy; <span id="currentYear"></span> Global Connect Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Message Box Element -->
+    <div id="message-box" class="message-box"></div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

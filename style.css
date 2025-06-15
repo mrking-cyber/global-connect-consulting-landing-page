@@ -1,0 +1,125 @@
+/* Custom CSS variables for consistent theming outside of Tailwind's defaults */
+:root {
+    --primary-color: #007bff; /* A vibrant blue for primary actions */
+    --secondary-color: #0056b3; /* A darker blue for headings and hovers */
+    --text-color: #333; /* Main body text color */
+    --light-text-color: #fff; /* White text for dark backgrounds */
+    --background-color: #f4f4f4; /* Light gray page background */
+    --light-section-bg: #e9e9e9; /* Slightly darker light gray for sections */
+    --border-color: #ddd; /* Light gray border */
+    --shadow-color: rgba(0,0,0,0.1); /* Subtle shadow for elements */
+    --dark-shadow-color: rgba(0,0,0,0.05); /* Lighter shadow */
+    --transition-speed: 0.3s ease; /* For smooth animations */
+}
+
+/* Applying Inter font globally and basic body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Smooth scroll behavior for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for a cleaner look while allowing scrolling */
+body::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, Opera */
+}
+body {
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
+}
+
+/* Hamburger icon styling (CSS only for the icon itself) */
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    position: relative;
+    transition: all var(--transition-speed);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    transition: all var(--transition-speed);
+}
+
+.hamburger::before {
+    transform: translateY(-10px);
+}
+
+.hamburger::after {
+    transform: translateY(10px);
+}
+
+/* Animation for hamburger to 'X' */
+.nav-open .hamburger {
+    background: transparent; /* Hide middle bar */
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.nav-open .hamburger::after {
+    transform: rotate(-45deg);
+}
+
+/* Specific mobile navigation menu positioning and styling */
+.mobile-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen */
+    width: 70%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding-top: 100px;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: right var(--transition-speed);
+    z-index: 1000;
+}
+
+.nav-open .mobile-nav-menu {
+    right: 0; /* Slide in when nav-open class is active */
+}
+
+/* Disable body scroll when mobile nav is open */
+.nav-open {
+    overflow: hidden;
+}
+
+/* Message box styling */
+.message-box {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green for success */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.message-box.error {
+    background-color: #f44336; /* Red for error */
+}
+.message-box.show {
+    opacity: 1;
+}
